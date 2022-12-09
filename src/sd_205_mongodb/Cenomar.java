@@ -10,12 +10,12 @@ import java.awt.Frame;
  *
  * @author User
  */
-public class BirthCertificate extends javax.swing.JFrame {
+public class Cenomar extends javax.swing.JFrame {
 
     /**
-     * Creates new form BirthCertificate
+     * Creates new form Cenomar
      */
-    public BirthCertificate() {
+    public Cenomar() {
         initComponents();
     }
 
@@ -38,6 +38,8 @@ public class BirthCertificate extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         minimize = new javax.swing.JButton();
         jSeparator4 = new javax.swing.JSeparator();
+        jLabel19 = new javax.swing.JLabel();
+        closeBtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -67,13 +69,13 @@ public class BirthCertificate extends javax.swing.JFrame {
         jComboBox4 = new javax.swing.JComboBox<>();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
         jLabel18 = new javax.swing.JLabel();
         jTextField22 = new javax.swing.JTextField();
         jSeparator25 = new javax.swing.JSeparator();
         jLabel30 = new javax.swing.JLabel();
+        backBtn = new javax.swing.JButton();
+        backBtn1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
@@ -95,16 +97,11 @@ public class BirthCertificate extends javax.swing.JFrame {
         jTextField25 = new javax.swing.JTextField();
         jSeparator27 = new javax.swing.JSeparator();
         jLabel32 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        closeBtn = new javax.swing.JButton();
-        backBtn = new javax.swing.JButton();
-        backBtn1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo.png"))); // NOI18N
@@ -139,8 +136,8 @@ public class BirthCertificate extends javax.swing.JFrame {
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, 1130, 10));
 
         jLabel9.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel9.setText("Certificate Of Live Birth");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 230, 60));
+        jLabel9.setText("CENOMAR/Certificate of No-Marriage");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 350, 60));
 
         minimize.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         minimize.setText("-");
@@ -162,6 +159,20 @@ public class BirthCertificate extends javax.swing.JFrame {
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1350, 20, 20, 30));
 
+        jLabel19.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
+        jLabel19.setText("Sign-in");
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 20, 60, 30));
+
+        closeBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        closeBtn.setText("X");
+        closeBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 3));
+        closeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closeBtnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(closeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1500, 0, 30, 30));
+
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -171,8 +182,8 @@ public class BirthCertificate extends javax.swing.JFrame {
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel3.setText("Place of Birth (Municipality)");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 150, 190, 20));
+        jLabel3.setText("Place of Birth (City/Municipality)");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 150, 210, 20));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel4.setText("Last Name");
@@ -274,38 +285,49 @@ public class BirthCertificate extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
         jLabel2.setText("Additional Information");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 20, 190, -1));
-
-        jLabel25.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
-        jLabel25.setText("Late Registration");
-        jPanel3.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 190, -1));
 
         jComboBox2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-Purpose of your request?-", "yes", "no" }));
         jComboBox2.setBorder(null);
-        jPanel3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, 260, 30));
-
-        jComboBox5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-Was the certificate registered late?-", "yes", "no" }));
-        jComboBox5.setBorder(null);
-        jPanel3.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 260, 30));
+        jPanel3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, 260, 30));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
         jLabel18.setText("Purpose of Request");
-        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 190, -1));
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 190, -1));
 
         jTextField22.setFont(new java.awt.Font("Segoe UI Symbol", 0, 14)); // NOI18N
         jTextField22.setBorder(null);
-        jPanel3.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 90, 230, 30));
+        jPanel3.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, 230, 30));
 
         jSeparator25.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel3.add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 120, 230, 10));
+        jPanel3.add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 120, 230, 10));
 
         jLabel30.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel30.setText("Tel/Phone Number");
-        jPanel3.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 60, 130, -1));
+        jPanel3.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 130, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, 1340, 150));
+
+        backBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        backBtn.setText("Back");
+        backBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 3));
+        backBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backBtnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 760, 90, 30));
+
+        backBtn1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        backBtn1.setText("Submit Request");
+        backBtn1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 51), 3));
+        backBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backBtn1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(backBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 770, 130, 30));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
@@ -387,50 +409,16 @@ public class BirthCertificate extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 1340, 150));
 
-        jLabel19.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
-        jLabel19.setText("Sign-in");
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 20, 60, 30));
-
-        closeBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        closeBtn.setText("X");
-        closeBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 3));
-        closeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                closeBtnMouseClicked(evt);
-            }
-        });
-        jPanel1.add(closeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1500, 0, 30, 30));
-
-        backBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        backBtn.setText("Back");
-        backBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 3));
-        backBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backBtnMouseClicked(evt);
-            }
-        });
-        jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 760, 90, 30));
-
-        backBtn1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        backBtn1.setText("Submit Request");
-        backBtn1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 51), 3));
-        backBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backBtn1MouseClicked(evt);
-            }
-        });
-        jPanel1.add(backBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 770, 130, 30));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1540, 850));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1530, 850));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBtnMouseClicked
+    private void homeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeBtnMouseClicked
         Home home = new Home();
         home.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_backBtnMouseClicked
+    }//GEN-LAST:event_homeBtnMouseClicked
 
     private void minimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizeMouseClicked
         this.setState(Frame.ICONIFIED);
@@ -440,15 +428,15 @@ public class BirthCertificate extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_minimizeActionPerformed
 
-    private void homeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeBtnMouseClicked
-        Home home = new Home();
-        home.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_homeBtnMouseClicked
-
     private void closeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeBtnMouseClicked
         this.dispose();
     }//GEN-LAST:event_closeBtnMouseClicked
+
+    private void backBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBtnMouseClicked
+        Home home = new Home();
+        home.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_backBtnMouseClicked
 
     private void backBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBtn1MouseClicked
         // TODO add your handling code here:
@@ -471,20 +459,20 @@ public class BirthCertificate extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BirthCertificate.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cenomar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BirthCertificate.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cenomar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BirthCertificate.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cenomar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BirthCertificate.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cenomar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BirthCertificate().setVisible(true);
+                new Cenomar().setVisible(true);
             }
         });
     }
@@ -498,7 +486,6 @@ public class BirthCertificate extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -512,7 +499,6 @@ public class BirthCertificate extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;

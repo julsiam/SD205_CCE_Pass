@@ -36,10 +36,10 @@ public class Home extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        cenomarBtn = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         birthBtn = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        marriageBtn = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jSeparator1 = new javax.swing.JSeparator();
@@ -49,29 +49,20 @@ public class Home extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        scholarshipBtn = new javax.swing.JButton();
+        deathBtn = new javax.swing.JButton();
+        businessBtn = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        suggestionsBtn = new javax.swing.JButton();
+        votersBtn = new javax.swing.JButton();
+        appointmentBtn = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
         minimize = new javax.swing.JButton();
         closeBtn = new javax.swing.JButton();
 
@@ -90,9 +81,14 @@ public class Home extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cenomar.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 80, 200, 170));
 
-        jButton2.setText("CENOMAR");
-        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 280, 120, 30));
+        cenomarBtn.setText("CENOMAR");
+        cenomarBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
+        cenomarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cenomarBtnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(cenomarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 280, 120, 30));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo.png"))); // NOI18N
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 90));
@@ -106,12 +102,17 @@ public class Home extends javax.swing.JFrame {
         });
         jPanel1.add(birthBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 280, 120, 30));
 
-        jButton5.setText("Marriage Certificate");
-        jButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 280, 120, 30));
+        marriageBtn.setText("Marriage Certificate");
+        marriageBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
+        marriageBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                marriageBtnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(marriageBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 280, 120, 30));
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
-        jLabel6.setText("Sign-out");
+        jLabel6.setText("Sign-up");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 20, 80, 30));
 
         jComboBox1.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
@@ -151,17 +152,32 @@ public class Home extends javax.swing.JFrame {
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/permit.png"))); // NOI18N
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 320, 210, 190));
 
-        jButton3.setText("Scholarship");
-        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 510, 120, 30));
+        scholarshipBtn.setText("Scholarship");
+        scholarshipBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
+        scholarshipBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                scholarshipBtnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(scholarshipBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 510, 120, 30));
 
-        jButton6.setText("Death Certificate");
-        jButton6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 510, 120, 30));
+        deathBtn.setText("Death Certificate");
+        deathBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
+        deathBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                deathBtnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(deathBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 510, 120, 30));
 
-        jButton7.setText("Business Permit");
-        jButton7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 510, 120, 30));
+        businessBtn.setText("Business Permit");
+        businessBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
+        businessBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                businessBtnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(businessBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 510, 120, 30));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/death.png"))); // NOI18N
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 320, 210, 180));
@@ -172,17 +188,32 @@ public class Home extends javax.swing.JFrame {
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/death.png"))); // NOI18N
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 550, 210, 190));
 
-        jButton8.setText("Suggestions");
-        jButton8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 750, 120, 30));
+        suggestionsBtn.setText("Suggestions");
+        suggestionsBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
+        suggestionsBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                suggestionsBtnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(suggestionsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 750, 120, 30));
 
-        jButton9.setText("Voter's Certificate");
-        jButton9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
-        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 750, 120, 30));
+        votersBtn.setText("Voter's Certificate");
+        votersBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
+        votersBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                votersBtnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(votersBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 750, 120, 30));
 
-        jButton10.setText("Appointment");
-        jButton10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
-        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 750, 120, 30));
+        appointmentBtn.setText("Appointment");
+        appointmentBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 0), 3, true));
+        appointmentBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                appointmentBtnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(appointmentBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 750, 120, 30));
 
         jSeparator3.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
@@ -208,34 +239,7 @@ public class Home extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         jLabel9.setText("CEBU CITY EASY PASSAGE");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 380, 60));
-
-        jLabel16.setText("CEBU CITY EASY PASSAGE");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, 170, -1));
-
-        jLabel17.setText("CEBU CITY EASY PASSAGE");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 170, -1));
-
-        jLabel18.setText("CEBU CITY EASY PASSAGE");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 170, -1));
-
-        jLabel19.setText("CEBU CITY EASY PASSAGE");
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, 170, -1));
-
-        jLabel20.setText("CEBU CITY EASY PASSAGE");
-        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 170, -1));
-
-        jLabel21.setText("CEBU CITY EASY PASSAGE");
-        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 170, -1));
-
-        jLabel22.setText("CEBU CITY EASY PASSAGE");
-        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 170, -1));
-
-        jLabel23.setText("CEBU CITY EASY PASSAGE");
-        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 170, -1));
-
-        jLabel24.setText("CEBU CITY EASY PASSAGE");
-        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 470, 170, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 380, 60));
 
         minimize.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         minimize.setText("-");
@@ -304,6 +308,54 @@ public class Home extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_homeBtnMouseClicked
 
+    private void marriageBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_marriageBtnMouseClicked
+        MarriageCertificate mc = new MarriageCertificate();
+        mc.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_marriageBtnMouseClicked
+
+    private void cenomarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cenomarBtnMouseClicked
+        Cenomar c = new Cenomar();
+        c.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_cenomarBtnMouseClicked
+
+    private void deathBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deathBtnMouseClicked
+        DeathCertificate dc = new DeathCertificate();
+        dc.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_deathBtnMouseClicked
+
+    private void businessBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_businessBtnMouseClicked
+//        BusinessPermit bp = new Businesspermit();
+//        bp.setVisible(true);
+//        this.dispose();
+    }//GEN-LAST:event_businessBtnMouseClicked
+
+    private void scholarshipBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_scholarshipBtnMouseClicked
+//       Scholarship s = new Scholarship();
+//        s.setVisible(true);
+//        this.dispose();
+    }//GEN-LAST:event_scholarshipBtnMouseClicked
+
+    private void votersBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_votersBtnMouseClicked
+//        VotersCertificate vc = new VotersCertificate();
+//        vc.setVisible(true);
+//        this.dispose();
+    }//GEN-LAST:event_votersBtnMouseClicked
+
+    private void appointmentBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appointmentBtnMouseClicked
+        Appointment a = new Appointment();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_appointmentBtnMouseClicked
+
+    private void suggestionsBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suggestionsBtnMouseClicked
+        Suggestion s = new Suggestion();
+        s.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_suggestionsBtnMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -340,17 +392,13 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton appointmentBtn;
     private javax.swing.JButton birthBtn;
+    private javax.swing.JButton businessBtn;
+    private javax.swing.JButton cenomarBtn;
     private javax.swing.JButton closeBtn;
+    private javax.swing.JButton deathBtn;
     private javax.swing.JLabel homeBtn;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -359,16 +407,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -381,6 +420,10 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JButton marriageBtn;
     private javax.swing.JButton minimize;
+    private javax.swing.JButton scholarshipBtn;
+    private javax.swing.JButton suggestionsBtn;
+    private javax.swing.JButton votersBtn;
     // End of variables declaration//GEN-END:variables
 }
