@@ -63,8 +63,11 @@ public class Home extends javax.swing.JFrame {
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
-        minimize = new javax.swing.JButton();
-        closeBtn = new javax.swing.JButton();
+        minimizebtn = new javax.swing.JLabel();
+        closebtn = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -113,6 +116,11 @@ public class Home extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
         jLabel6.setText("Sign-up");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 20, 80, 30));
 
         jComboBox1.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
@@ -135,12 +143,17 @@ public class Home extends javax.swing.JFrame {
         jPanel1.add(homeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 60, 30));
 
         jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator2.setForeground(new java.awt.Color(0, 204, 0));
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1350, 20, 20, 30));
 
         jLabel8.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
         jLabel8.setText("Sign-in");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 20, 60, 30));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/birth.png"))); // NOI18N
@@ -216,7 +229,7 @@ public class Home extends javax.swing.JFrame {
         jPanel1.add(appointmentBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 750, 120, 30));
 
         jSeparator3.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator3.setForeground(new java.awt.Color(0, 204, 0));
         jSeparator3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, 1130, 10));
 
@@ -224,7 +237,7 @@ public class Home extends javax.swing.JFrame {
         jSeparator4.setForeground(new java.awt.Color(0, 204, 0));
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, 10, 740));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 90, 10, 700));
 
         jSeparator5.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator5.setForeground(new java.awt.Color(0, 204, 0));
@@ -235,36 +248,60 @@ public class Home extends javax.swing.JFrame {
         jSeparator6.setForeground(new java.awt.Color(0, 204, 0));
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 90, 10, 750));
+        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 90, 10, 700));
 
         jLabel9.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         jLabel9.setText("CEBU CITY EASY PASSAGE");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 380, 60));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 380, 60));
 
-        minimize.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        minimize.setText("-");
-        minimize.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 3));
-        minimize.addMouseListener(new java.awt.event.MouseAdapter() {
+        minimizebtn.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
+        minimizebtn.setForeground(new java.awt.Color(102, 102, 102));
+        minimizebtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        minimizebtn.setText("-");
+        minimizebtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                minimizeMouseClicked(evt);
+                minimizebtnMouseClicked(evt);
             }
         });
-        minimize.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                minimizeActionPerformed(evt);
-            }
-        });
-        jPanel1.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 0, 30, 30));
+        jPanel1.add(minimizebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 0, 30, 30));
 
-        closeBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        closeBtn.setText("X");
-        closeBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 3));
-        closeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        closebtn.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        closebtn.setForeground(new java.awt.Color(102, 102, 102));
+        closebtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        closebtn.setText("x");
+        closebtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                closeBtnMouseClicked(evt);
+                closebtnMouseClicked(evt);
             }
         });
-        jPanel1.add(closeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1500, 0, 30, 30));
+        jPanel1.add(closebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1500, 0, 30, 30));
+
+        jPanel2.setBackground(new java.awt.Color(0, 102, 51));
+
+        jLabel7.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jLabel7.setText("@ 2022 Copyright: Cebu City Easy Passage");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(620, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(613, 613, 613))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 790, 1540, 40));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/image 2.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 620, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -283,18 +320,6 @@ public class Home extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void minimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizeMouseClicked
-        this.setState(Frame.ICONIFIED);
-    }//GEN-LAST:event_minimizeMouseClicked
-
-    private void closeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeBtnMouseClicked
-        this.dispose();
-    }//GEN-LAST:event_closeBtnMouseClicked
-
-    private void minimizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minimizeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_minimizeActionPerformed
 
     private void birthBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_birthBtnMouseClicked
         BirthCertificate bc = new BirthCertificate();
@@ -356,6 +381,26 @@ public class Home extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_suggestionsBtnMouseClicked
 
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        CCE_Login a = new CCE_Login();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        CCE_Registration a = new CCE_Registration();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void minimizebtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizebtnMouseClicked
+        this.setExtendedState(JFrame.ICONIFIED);
+    }//GEN-LAST:event_minimizebtnMouseClicked
+
+    private void closebtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closebtnMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_closebtnMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -384,6 +429,7 @@ public class Home extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Home().setVisible(true);
@@ -396,7 +442,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton birthBtn;
     private javax.swing.JButton businessBtn;
     private javax.swing.JButton cenomarBtn;
-    private javax.swing.JButton closeBtn;
+    private javax.swing.JLabel closebtn;
     private javax.swing.JButton deathBtn;
     private javax.swing.JLabel homeBtn;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -409,11 +455,14 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -421,7 +470,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JButton marriageBtn;
-    private javax.swing.JButton minimize;
+    private javax.swing.JLabel minimizebtn;
     private javax.swing.JButton scholarshipBtn;
     private javax.swing.JButton suggestionsBtn;
     private javax.swing.JButton votersBtn;

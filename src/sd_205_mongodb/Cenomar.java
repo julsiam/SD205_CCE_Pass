@@ -5,6 +5,7 @@
 package sd_205_mongodb;
 
 import java.awt.Frame;
+import javax.swing.JFrame;
 
 /**
  *
@@ -30,16 +31,11 @@ public class Cenomar extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         homeBtn = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
-        minimize = new javax.swing.JButton();
-        jSeparator4 = new javax.swing.JSeparator();
-        jLabel19 = new javax.swing.JLabel();
-        closeBtn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -97,6 +93,11 @@ public class Cenomar extends javax.swing.JFrame {
         jTextField25 = new javax.swing.JTextField();
         jSeparator27 = new javax.swing.JSeparator();
         jLabel32 = new javax.swing.JLabel();
+        minimizebtn = new javax.swing.JLabel();
+        closebtn = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jSeparator11 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -106,10 +107,6 @@ public class Cenomar extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo.png"))); // NOI18N
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 90));
-
-        jLabel6.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
-        jLabel6.setText("Sign-out");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 20, 80, 30));
 
         jComboBox1.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Services", "Birth Certificate", "Marriage Certificate", "CENOMAR", "Death Certificate", "Business Permit", "Scholarship", "Voters Certificate", "Appointment", "Suggestions" }));
@@ -138,40 +135,6 @@ public class Cenomar extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel9.setText("CENOMAR/Certificate of No-Marriage");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 350, 60));
-
-        minimize.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        minimize.setText("-");
-        minimize.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 3));
-        minimize.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                minimizeMouseClicked(evt);
-            }
-        });
-        minimize.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                minimizeActionPerformed(evt);
-            }
-        });
-        jPanel1.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 0, 30, 30));
-
-        jSeparator4.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
-        jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1350, 20, 20, 30));
-
-        jLabel19.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
-        jLabel19.setText("Sign-in");
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 20, 60, 30));
-
-        closeBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        closeBtn.setText("X");
-        closeBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 3));
-        closeBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                closeBtnMouseClicked(evt);
-            }
-        });
-        jPanel1.add(closeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1500, 0, 30, 30));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
@@ -317,7 +280,7 @@ public class Cenomar extends javax.swing.JFrame {
                 backBtnMouseClicked(evt);
             }
         });
-        jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 760, 90, 30));
+        jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 760, 90, 30));
 
         backBtn1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         backBtn1.setText("Submit Request");
@@ -327,7 +290,7 @@ public class Cenomar extends javax.swing.JFrame {
                 backBtn1MouseClicked(evt);
             }
         });
-        jPanel1.add(backBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 770, 130, 30));
+        jPanel1.add(backBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 760, 130, 30));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
@@ -409,6 +372,51 @@ public class Cenomar extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 1340, 150));
 
+        minimizebtn.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
+        minimizebtn.setForeground(new java.awt.Color(102, 102, 102));
+        minimizebtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        minimizebtn.setText("-");
+        minimizebtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                minimizebtnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(minimizebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 0, 30, 30));
+
+        closebtn.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        closebtn.setForeground(new java.awt.Color(102, 102, 102));
+        closebtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        closebtn.setText("x");
+        closebtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closebtnMouseClicked(evt);
+            }
+        });
+        jPanel1.add(closebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1500, 0, 30, 30));
+
+        jLabel8.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
+        jLabel8.setText("Sign-in");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 20, 60, 30));
+
+        jLabel6.setFont(new java.awt.Font("SansSerif", 1, 15)); // NOI18N
+        jLabel6.setText("Sign-up");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 20, 80, 30));
+
+        jSeparator11.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator11.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator11.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1350, 20, 20, 30));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1530, 850));
 
         pack();
@@ -420,18 +428,6 @@ public class Cenomar extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_homeBtnMouseClicked
 
-    private void minimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizeMouseClicked
-        this.setState(Frame.ICONIFIED);
-    }//GEN-LAST:event_minimizeMouseClicked
-
-    private void minimizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minimizeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_minimizeActionPerformed
-
-    private void closeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeBtnMouseClicked
-        this.dispose();
-    }//GEN-LAST:event_closeBtnMouseClicked
-
     private void backBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBtnMouseClicked
         Home home = new Home();
         home.setVisible(true);
@@ -441,6 +437,26 @@ public class Cenomar extends javax.swing.JFrame {
     private void backBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBtn1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_backBtn1MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        CCE_Login a = new CCE_Login();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        CCE_Registration a = new CCE_Registration();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void minimizebtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizebtnMouseClicked
+        this.setExtendedState(JFrame.ICONIFIED);
+    }//GEN-LAST:event_minimizebtnMouseClicked
+
+    private void closebtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closebtnMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_closebtnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -480,7 +496,7 @@ public class Cenomar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
     private javax.swing.JButton backBtn1;
-    private javax.swing.JButton closeBtn;
+    private javax.swing.JLabel closebtn;
     private javax.swing.JLabel homeBtn;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
@@ -496,7 +512,6 @@ public class Cenomar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel26;
@@ -510,6 +525,7 @@ public class Cenomar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -517,6 +533,7 @@ public class Cenomar extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator17;
     private javax.swing.JSeparator jSeparator19;
     private javax.swing.JSeparator jSeparator2;
@@ -526,7 +543,6 @@ public class Cenomar extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator26;
     private javax.swing.JSeparator jSeparator27;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
@@ -546,6 +562,6 @@ public class Cenomar extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JButton minimize;
+    private javax.swing.JLabel minimizebtn;
     // End of variables declaration//GEN-END:variables
 }
