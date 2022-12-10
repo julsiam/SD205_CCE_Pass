@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/SD_205_Mongodb/src/sd_205_mongodb/Login.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SD_205_Mongodb/src/sd_205_mongodb/MarriageCertificate.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SD_205_Mongodb/src/sd_205_mongodb/Cenomar.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SD_205_Mongodb/src/sd_205_mongodb/Appointment.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SD_205_Mongodb/src/sd_205_mongodb/Suggestion.java</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/SD_205_Mongodb/src/sd_205_mongodb/Home.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/SD_205_Mongodb/src/sd_205_mongodb/Register.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SD_205_Mongodb/src/sd_205_mongodb/DeathCertificate.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/SD_205_Mongodb/src/sd_205_mongodb/BirthCertificate.java</file>
         </group>
     </open-files>
 </project-private>

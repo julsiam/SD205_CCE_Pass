@@ -239,7 +239,7 @@ public class Home extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         jLabel9.setText("CEBU CITY EASY PASSAGE");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 380, 60));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 380, 60));
 
         minimize.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         minimize.setText("-");
